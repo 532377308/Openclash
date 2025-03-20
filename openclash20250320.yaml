@@ -135,7 +135,7 @@ dns:
 #pr: &pr-Advertising {type: select, proxies: [ China, Global, REJECT]}
 proxy-groups:
   - {name: PROXY, type: select, include-all: true, filter: "^((?!(DIRECT|Direct|com|重置|地址|到期|剩余)).)*$",
-     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"}
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"}
   - {name: Global, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png"}
   - {name: YouTube, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],

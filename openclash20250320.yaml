@@ -122,58 +122,58 @@ dns:
  
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
-pr: &Global {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
-pr: &YouTube {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
-pr: &TikTok {type: select, proxies: [ China, PROXY, 台湾自动, 日本自动, 韩国自动, 新加坡自动]}
-pr: &ChatGPT {type: select, proxies: [ China, PROXY, 台湾自动, 日本自动, 韩国自动, 新加坡自动]}
-pr: &GitHub {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
-pr: &Speedtest {type: select, proxies: [ China, PROXY]}
-pr: &Apple {type: select, proxies: [ China, Global]}
-pr: &Blibili {type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
-pr: &Steam {type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
-pr: &Final {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
-pr: &Advertising {type: select, proxies: [ China, Global, REJECT]}
+#pr: &pr-Global {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
+#pr: &pr-YouTube {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
+#pr: &pr-TikTok {type: select, proxies: [ China, PROXY, 台湾自动, 日本自动, 韩国自动, 新加坡自动]}
+#pr: &pr-ChatGPT {type: select, proxies: [ China, PROXY, 台湾自动, 日本自动, 韩国自动, 新加坡自动]}
+#pr: &pr-GitHub {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
+#pr: &pr-Speedtest {type: select, proxies: [ China, PROXY]}
+#pr: &pr-Apple {type: select, proxies: [ China, Global]}
+#pr: &pr-Blibili {type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
+#pr: &pr-Steam {type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
+#pr: &pr-Final {type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移]}
+#pr: &pr-Advertising {type: select, proxies: [ China, Global, REJECT]}
 proxy-groups:
-  - {name: PROXY, type: select, include-all: true, filter: "^((?!(DIRECT|Direct|com|重置|地址|到期|剩余)).)*$", icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"}
-  - {name: Global, <<: *Global, icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png"}
-  - {name: YouTube, <<: *YouTube, icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png"}
-  - {name: TikTok, <<: *TikTok, icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_2.png"}
-  - {name: ChatGPT, <<: *ChatGPT, icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png"}
-  - {name: GitHub, <<: *GitHub, icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png"}
-  - {name: Speedtest, <<: *Speedtest, icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png"}
-  - {name: Apple, <<: *Apple, icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"}
-  - {name: Blibili, <<: *Blibili, icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png"}
-  - {name: Steam, <<: *Steam, icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png"}
-  - {name: China, type: select, proxies: [ Direct, PROXY], icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png"}
-  - {name: Final, <<: *Final, icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"}
-  - {name: Advertising, <<: *Advertising,
-   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png"}
-  - {name: 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$", icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
-  - {name: 台湾自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)taiwan))^((?!(港|日|韩|新|美)).)*$" , icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png"}
-  - {name: 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" , icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
-  - {name: 韩国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(韩|KR|(?i)Seoul))^((?!(港|台|日|新|美)).)*$" , icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png"}
-  - {name: 新加坡自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新|SG|狮|(?i)Singapore))^((?!(港|台|韩|日|美)).)*$" , icon:
-   "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
-  - {name: 自动测速, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(DIRECT|Direct|com|重置|地址|到期|剩余)).)*$", icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png"}
-  - {name: 故障转移, type: fallback, include-all: true, tolerance: 20, interval: 300, proxies: [ 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动], filter:  "(?=.*(无视所有独立节点|(?i)nonono))^((?!(港|台|日|新|美)).)*$", icon:
-   "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png"}
+  - {name: PROXY, type: select, include-all: true, filter: "^((?!(DIRECT|Direct|com|重置|地址|到期|剩余)).)*$",
+     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"}
+  - {name: Global, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png"}
+  - {name: YouTube, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png"}
+  - {name: TikTok, type: select, proxies: [ China, PROXY, 台湾自动, 日本自动, 韩国自动, 新加坡自动],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_2.png"}
+  - {name: ChatGPT, type: select, proxies: [ China, PROXY, 台湾自动, 日本自动, 韩国自动, 新加坡自动],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png"}
+  - {name: GitHub, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png"}
+  - {name: Speedtest, type: select, proxies: [ China, PROXY],
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png"}
+  - {name: Apple, type: select, proxies: [ China, Global],
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"}
+  - {name: Blibili, type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png"}
+  - {name: Steam, type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png"}
+  - {name: China, type: select, proxies: [ Direct, PROXY],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png"}
+  - {name: Final, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"}
+  - {name: Advertising, type: select, proxies: [ China, Global, REJECT],
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png"}
+  - {name: 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$",
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
+  - {name: 台湾自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)taiwan))^((?!(港|日|韩|新|美)).)*$" ,
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png"}
+  - {name: 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" ,
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
+  - {name: 韩国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(韩|KR|(?i)Seoul))^((?!(港|台|日|新|美)).)*$" ,
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png"}
+  - {name: 新加坡自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新|SG|狮|(?i)Singapore))^((?!(港|台|韩|日|美)).)*$" ,
+      icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
+  - {name: 自动测速, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(DIRECT|Direct|com|重置|地址|到期|剩余)).)*$",
+      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png"}
+  - {name: 故障转移, type: fallback, include-all: true, tolerance: 20, interval: 300, proxies: [ 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动], filter:  "(?=.*(无视所有独立节点|(?i)nonono))^((?!(港|台|日|新|美)).)*$",
+     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png"}
 #  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
 #  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
 #  - {name: Global, type: select, proxies: [ Direct, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png"} 

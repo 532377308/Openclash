@@ -9,7 +9,7 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    proxy: Direct
+    proxy: DIRECT
     header:
       User-Agent:
       - "Clash"
@@ -23,7 +23,7 @@ proxy-providers:
       #     target: "iplc x $1"
 # 节点信息
 proxies:
-  - {name: Direct, type: direct, udp: true}
+  - {name: DIRECT, type: direct, udp: true}
 
 # 全局配置 
 port: 7890
@@ -154,7 +154,7 @@ proxy-groups:
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png"}
   - {name: Steam, type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png"}
-  - {name: China, type: select, proxies: [ Direct, PROXY],
+  - {name: China, type: select, proxies: [ DIRECT, PROXY],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png"}
   - {name: Final, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"}

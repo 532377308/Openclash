@@ -246,7 +246,7 @@ rule-providers:
   #大规则
   Global_domain: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Global/Global.list"} #Global
   gfw_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"} #gfw
-  Global_liandu2024: { <<: *class, url: "https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/Proxy.list"} #Global@liandu2024 qx
+  Global_liandu2024: { <<: *class, url: "https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list"} #Global@liandu2024 qx
   #IP集
   cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"} #中国IP
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"} #谷歌IP

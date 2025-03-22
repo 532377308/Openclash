@@ -13,8 +13,8 @@ proxy-providers:
     header:
       User-Agent:
       - "Clash"
-      - "mihomo"
-      - "Clash.meta"
+      #- "mihomo"
+      #- "Clash.meta"
       # # 名字替换，支持正则表达式
       # proxy-name:
       #   - pattern: "test"
@@ -199,6 +199,7 @@ rules:
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,speedtest_domain,Speedtest
   - RULE-SET,telegram_domain,Global
+  - RULE-SET,Global_liandu2024,Global
   - RULE-SET,netflix_domain,Global
   - RULE-SET,gfw_domain,Global
   - RULE-SET,geolocation-!cn,Global
@@ -245,6 +246,7 @@ rule-providers:
   #大规则
   Global_domain: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Global/Global.list"} #Global
   gfw_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"} #gfw
+  Global_liandu2024: { <<: *class, url: "https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/Proxy.list"} #Global@liandu2024 qx
   #IP集
   cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"} #中国IP
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"} #谷歌IP

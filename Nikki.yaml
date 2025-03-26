@@ -25,7 +25,6 @@ proxy-providers:
       #     target: "TEST"
       #   - pattern: "IPLC-(.*?)倍"
       #     target: "iplc x $1"
-proxy-providers:
   Airport2:
     url: "https://hongxingdl.one/hxyunvip?token=f767e971333dd00d39083d74fbad3e06"
     type: http
@@ -50,7 +49,6 @@ proxy-providers:
       #     target: "TEST"
       #   - pattern: "IPLC-(.*?)倍"
       #     target: "iplc x $1"
-proxy-providers:
   Airport3:
     url: "http://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=980c1eb5a513e805b7b3d63425c0ae28"
     type: http

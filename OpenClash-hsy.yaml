@@ -37,7 +37,7 @@ mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
 bind-address: "*"
-ipv6: false
+ipv6: true
 unified-delay: true
 tcp-concurrent: true
 log-level: warning
@@ -100,7 +100,7 @@ tun:
 dns:
   enable: true
   listen: 0.0.0.0:1053
-  ipv6: false
+  ipv6: true
   respect-rules: true
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
@@ -176,7 +176,7 @@ proxy-groups:
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
   - {name: 自动测速, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(DIRECT|Direct|com|刷新|订阅|官网|异常|失败|加入|频道|50倍|10倍|重置|地址|到期|剩余)).)*$",
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png"}
-  - {name: 故障转移, type: fallback, include-all: true, tolerance: 20, interval: 60, proxies: [ 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动], filter:  "(?=.*(无视所有独立节点|(?i)nonono))^((?!(港|台|日|新|美)).)*$",
+  - {name: 故障转移, type: fallback, include-all: true, tolerance: 20, interval: 60, proxies: [ 台湾自动, 香港自动, 日本自动, 韩国自动, 新加坡自动], filter:  "(?=.*(无视所有独立节点|(?i)nonono))^((?!(港|台|日|新|美)).)*$",
      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png"}
 #  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
 #  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }

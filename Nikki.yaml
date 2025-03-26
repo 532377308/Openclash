@@ -10,6 +10,10 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: Direct
+    override:
+      additional-prefix: '【火烧云】'
+      skip-cert-verify: true
+      udp: true
     header:
       User-Agent:
       - "Clash"
@@ -21,6 +25,57 @@ proxy-providers:
       #     target: "TEST"
       #   - pattern: "IPLC-(.*?)倍"
       #     target: "iplc x $1"
+proxy-providers:
+  Airport2:
+    url: "https://hongxingdl.one/hxyunvip?token=f767e971333dd00d39083d74fbad3e06"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: Direct
+    override:
+      additional-prefix: '【红杏】'
+      skip-cert-verify: true
+      udp: true
+    header:
+      User-Agent:
+      - "Clash"
+      #- "mihomo"
+      #- "Clash.meta"
+      # # 名字替换，支持正则表达式
+      # proxy-name:
+      #   - pattern: "test"
+      #     target: "TEST"
+      #   - pattern: "IPLC-(.*?)倍"
+      #     target: "iplc x $1"
+proxy-providers:
+  Airport3:
+    url: "http://6bsub.zhunchuanpb.com/api/v1/client/subscribe?token=980c1eb5a513e805b7b3d63425c0ae28"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: Direct
+    override:
+      additional-prefix: '【牛逼】'
+      skip-cert-verify: true
+      udp: true
+    header:
+      User-Agent:
+      - "Clash"
+      #- "mihomo"
+      #- "Clash.meta"
+      # # 名字替换，支持正则表达式
+      # proxy-name:
+      #   - pattern: "test"
+      #     target: "TEST"
+      #   - pattern: "IPLC-(.*?)倍"
+      #     target: "iplc x $1"
+
 # 节点信息
 proxies:
   - {name: Direct, type: direct, udp: true}

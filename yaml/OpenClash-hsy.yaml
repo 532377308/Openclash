@@ -11,7 +11,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '【火烧云】'
+      additional-prefix: '火烧云｜'
       skip-cert-verify: true
       udp: true
     header:

@@ -11,7 +11,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '【自建】'
+      additional-prefix: '自建｜'
       skip-cert-verify: true
       udp: true
     header:

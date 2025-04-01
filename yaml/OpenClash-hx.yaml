@@ -11,7 +11,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '【红杏】'
+      additional-prefix: '红杏｜'
       skip-cert-verify: true
       udp: true
     header:

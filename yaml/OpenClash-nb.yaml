@@ -11,7 +11,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '【牛逼】'
+      additional-prefix: '牛逼｜'
       skip-cert-verify: true
       udp: true
     header:

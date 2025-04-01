@@ -11,7 +11,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '【火烧云】'
+      additional-prefix: '火烧云｜'
       skip-cert-verify: true
       udp: true
     header:
@@ -35,7 +35,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '【红杏】'
+      additional-prefix: '红杏｜'
       skip-cert-verify: true
       udp: true
     header:
@@ -59,7 +59,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '【牛逼】'
+      additional-prefix: '牛逼｜'
       skip-cert-verify: true
       udp: true
     header:

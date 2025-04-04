@@ -11,7 +11,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '火烧云｜'
+      additional-prefix: '【火烧云】'
       skip-cert-verify: true
       udp: true
     header:
@@ -35,7 +35,7 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '红杏｜'
+      additional-prefix: '【红杏】'
       skip-cert-verify: true
       udp: true
     header:
@@ -59,14 +59,14 @@ proxy-providers:
       interval: 300
     proxy: Direct
     override:
-      additional-prefix: '牛逼｜'
+      additional-prefix: '【牛逼】'
       skip-cert-verify: true
       udp: true
     header:
       User-Agent:
-      - "Clash"
+      #- "Clash"
       #- "mihomo"
-      #- "Clash.meta"
+      - "Clash.meta"
       # # 名字替换，支持正则表达式
       # proxy-name:
       #   - pattern: "test"
@@ -201,17 +201,17 @@ proxy-groups:
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png"}
   - {name: Speedtest, type: select, proxies: [ China, PROXY],
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png"}
-  - {name: Apple, type: select, proxies: [ China, Global],
+  - {name: Apple, type: select, proxies: [ China, PROXY],
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"}
-  - {name: Blibili, type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+  - {name: Blibili, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png"}
-  - {name: Steam, type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+  - {name: Steam, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png"}
   - {name: China, type: select, proxies: [ Direct, PROXY],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png"}
   - {name: Final, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"}
-  - {name: Advertising, type: select, proxies: [ China, Global, REJECT],
+  - {name: Advertising, type: select, proxies: [ China, PROXY, REJECT],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png"}
   - {name: 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(官网|异常|刷新|失败|订阅|加入|频道|台|日|韩|新|深|美)).)*$",
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
@@ -225,7 +225,10 @@ proxy-groups:
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
   - {name: 自动测速, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(DIRECT|Direct|com|刷新|订阅|官网|异常|失败|加入|频道|50倍|10倍|重置|地址|到期|剩余)).)*$",
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png"}
-  - {name: 故障转移, type: fallback, include-all: true, tolerance: 20, interval: 60, proxies: [ 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动], filter:  "(?=.*(无视所有独立节点|(?i)nonono))^((?!(港|台|日|新|美)).)*$",
+  - {name: 红杏自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(红杏))^((?!(官网|异常|刷新|失败|订阅|加入|频道|台|日|韩|新|深|美)).)*$"}
+  - {name: 火烧自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(火烧))^((?!(官网|异常|刷新|失败|订阅|加入|频道|台|日|韩|新|深|美)).)*$"}
+  - {name: 牛逼自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(牛逼))^((?!(官网|异常|刷新|失败|订阅|加入|频道|台|日|韩|新|深|美)).)*$"}
+  - {name: 故障转移, type: fallback, include-all: true, tolerance: 20, interval: 60, proxies: [ 红杏自动, 火烧自动, 牛逼自动], filter:  "(?=.*(无视所有独立节点|(?i)nonono))^((?!(港|台|日|新|美)).)*$",
      icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png"}
 #  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
 #  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }

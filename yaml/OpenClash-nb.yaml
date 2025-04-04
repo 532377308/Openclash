@@ -152,17 +152,17 @@ proxy-groups:
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png"}
   - {name: Speedtest, type: select, proxies: [ China, PROXY],
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png"}
-  - {name: Apple, type: select, proxies: [ China, Global],
+  - {name: Apple, type: select, proxies: [ China, PROXY],
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"}
-  - {name: Blibili, type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+  - {name: Blibili, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png"}
-  - {name: Steam, type: select, proxies: [ China, Global, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
+  - {name: Steam, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png"}
   - {name: China, type: select, proxies: [ Direct, PROXY],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png"}
   - {name: Final, type: select, proxies: [ China, PROXY, 香港自动, 台湾自动, 日本自动, 韩国自动, 新加坡自动, 自动测速, 故障转移],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"}
-  - {name: Advertising, type: select, proxies: [ China, Global, REJECT],
+  - {name: Advertising, type: select, proxies: [ China, PROXY, REJECT],
       icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png"}
   - {name: 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(官网|异常|刷新|失败|订阅|加入|频道|台|日|韩|新|深|美)).)*$",
       icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}

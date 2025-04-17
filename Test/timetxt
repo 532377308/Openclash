@@ -1,8 +1,8 @@
   {
     "skip-cert-verify": true,
-    "sni": "mmbiz.redapricotcloud.com",
+    "sni": "mmbiz.redapricotcloud.com1",
     "type": "trojan",
-    "password": "1ecb120c-e964-42b5-92b4-56780b966977",
+    "password": "1ecb120c-e964-42b5-92b4-56780b9669771",
     "server": "nbae7a7.kaiqsz.com",
     "port": 178951,
     "name": "到期时间 xxxx-xx-xx",
@@ -10,5 +10,5 @@
     "_subName": "红杏",
     "_subDisplayName": "",
     "ecn": true,
-    "test-url": "http://1.0.0.1/generate_204"
+    "test-url": "http://1.0.0.1/generate_2014"
   },

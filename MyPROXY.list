@@ -1,8 +1,13 @@
 # 代理列表
+# DOMAIN = 完全匹配
+# DOMAIN-KEYWORD = 包含关键字就匹配
+# DOMAIN-SUFFIX = 后缀匹配（主域名及其子域名）
+
 DOMAIN-SUFFIX,av01.tv
 DOMAIN-KEYWORD,hongxingdl
 DOMAIN-KEYWORD,jable
 DOMAIN-KEYWORD,speed-vps.ccwu.cc
+DOMAIN-SUFFIX,ddgksf2013.top
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,missav.ai
 DOMAIN-SUFFIX,missav.com

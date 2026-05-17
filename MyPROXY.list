@@ -3,7 +3,6 @@
 # DOMAIN-KEYWORD = 包含关键字就匹配
 # DOMAIN-SUFFIX = 后缀匹配（主域名及其子域名）
 
-DOMAIN-SUFFIX,av01.tv
 DOMAIN-KEYWORD,hongxingdl
 DOMAIN-KEYWORD,jable
 DOMAIN-KEYWORD,speed-vps.ccwu.cc
@@ -11,6 +10,7 @@ DOMAIN-KEYWORD,ddgksf2013
 DOMAIN-KEYWORD,github
 DOMAIN-KEYWORD,xiaobaivpn
 DOMAIN-KEYWORD,一元机场
+DOMAIN-SUFFIX,av01.tv
 DOMAIN-SUFFIX,ddgksf2013.top
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,missav.ai
